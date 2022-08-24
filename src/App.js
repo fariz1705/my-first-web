@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
-import { AppBar, Button, Stack, Toolbar, Typography, Link } from "@mui/material";
-import "./App.css";
+import React from "react";
+import { AppBar, Button, Stack, Toolbar, Typography, Link, Container, Box, CssBaseline } from "@mui/material";
+import Content from "./content/Content";
 
 function App() {
   return (
@@ -11,13 +11,19 @@ function App() {
             my project
           </Typography>
           <Stack direction="row" spacing={2}>
-            <Button color="inherit"><Link href="https://mui.com/material-ui/react-link/#main-content">Featurs</Link></Button>
-            <Button color="inherit">pricing</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">login</Button>
+            <Button color="primary">
+              <Link href="https://mui.com/material-ui/react-link/#main-content">Featurs</Link>
+            </Button>
+            <Button color="primary">
+              <Link href="https://mui.com/material-ui/react-link/#main-content">pricing</Link>
+            </Button>
+            <Button color="primary">
+              <Link href="https://mui.com/material-ui/react-link/#main-content">about</Link>
+            </Button>
           </Stack>
         </Toolbar>
       </AppBar>
+      <Content />
     </div>
   );
 }
