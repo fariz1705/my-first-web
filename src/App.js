@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import { AppBar, Button, Stack, Toolbar, Typography, Link } from "@mui/material";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            my project
+          </Typography>
+          <Stack direction="row" spacing={2}>
+            <Button color="inherit"><Link href="https://mui.com/material-ui/react-link/#main-content">Featurs</Link></Button>
+            <Button color="inherit">pricing</Button>
+            <Button color="inherit">About</Button>
+            <Button color="inherit">login</Button>
+          </Stack>
+        </Toolbar>
+      </AppBar>
     </div>
   );
 }
